@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'layout_desktop.dart';
-import 'layout_mobile.dart';
 
 // Main application widget
 class App extends StatefulWidget {
@@ -19,7 +18,7 @@ class AppState extends State<App> {
     if (width >= 600) {
       return const LayoutDesktop(title: "App Desktop Title");
     } else {
-      return const LayoutMobile(title: "App Mobile Title");
+      return const LayoutDesktop(title: "App Mobile Title");
     }
   }
 

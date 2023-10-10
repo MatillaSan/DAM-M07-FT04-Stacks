@@ -8,6 +8,15 @@ class AppData with ChangeNotifier {
 
   late dynamic dataExample;
 
+  // App status
+  bool isSidebarLeftVisible = false;
+
+  // Toggle sidebar left
+  void toggleSidebarLeft() {
+    isSidebarLeftVisible = !isSidebarLeftVisible;
+    notifyListeners();
+  }
+
   // Tell if data is ready
   bool dataReady(String type) {
     switch (type) {
