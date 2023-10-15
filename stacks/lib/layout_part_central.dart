@@ -33,7 +33,30 @@ class LayoutPartCentralState extends State<LayoutPartCentral> {
               const SizedBox(width: 16),
             ],
           ),
-          middle: Text("hola"),
+          middle: 
+            CupertinoButton(
+              padding: const EdgeInsets.all(0.0),
+              onPressed: appData.toggleSidebarRight,
+              child: Icon(
+                CupertinoIcons.settings,
+                color: appData.isSidebarRightVisible
+                    ? CupertinoColors.activeBlue
+                    : CupertinoColors.black,
+                size: 24.0,
+                semanticLabel: 'Text to announce in accessibility modes',
+            )),
+          trailing: 
+            CupertinoButton(
+              padding: const EdgeInsets.all(0.0),
+              onPressed: appData.toggleSidebarRight,
+              child: Icon(
+                CupertinoIcons.sidebar_right,
+                color: appData.isSidebarRightVisible
+                    ? CupertinoColors.activeBlue
+                    : CupertinoColors.black,
+                size: 24.0,
+                semanticLabel: 'Text to announce in accessibility modes',
+              )),
         ),
         child: Padding(
           padding: const EdgeInsets.only(top: 50.0),
